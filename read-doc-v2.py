@@ -45,7 +45,6 @@ def read_docx(path, extra):
             lineText = para.text
             if(nextLine == False):
                 id = ''
-                position = ''
             if('-' in lineText and ';' in lineText and '[' in lineText and ']' in lineText and ':' in lineText):
                 nextLine = True
                 head = lineText.split(' ')
@@ -59,7 +58,6 @@ def read_docx(path, extra):
                 ampm = head[2]
 
                 id = head[3].strip().replace('[', '').replace(']', '').replace('dq', '')
-                position = int(id) - 1
                 # print(id)
             elif(nextLine == True and lineText and id):
                 quote = lineText.strip()
@@ -80,16 +78,9 @@ def read_docx(path, extra):
                             "monthText": "%s",
                             "dayText": "%s",
                             "timeText": "%s",
-                            "ampm": "%s",
-                            "position": "%s",
-                            "ratingMax": "0",
-                            "ratingCount": "0",
-                            "favoriteCount": "0",
-                            "readCount": "0",
-                            "updateReadAt": "",
-                            "updateRatingAt": ""
+                            "ampm": "%s"
                         }%s
-                    ''' % (id, quote, yearText, monthText, dayText, timeText, ampm, position, sep)
+                    ''' % (id, quote, yearText, monthText, dayText, timeText, ampm, sep)
                 else:
                     output = '''
                         {

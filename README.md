@@ -1,10 +1,15 @@
 # Python Docx Reader
-
 A python program that reads a MS document from a specified directory. It loops through all the .docx files, and creates only one json file using the extracted data.
 
 ![Document overview](images/overview.png)
 
 [View the Demo][1]
+
+## The Problem
+I have written lots of quotes, but are all either written on paper of typed in a word document. Proper distribution to wider audience became a problem.
+
+## The Set-up
+I used my knowledge in python to automate the process of generating the needed json file for all my quotes that were saved in a .docs file (about 3 different documents). The python script was able to read the files, generate one single json file. which I intend using to update my quotes database.
 
 ## Document format  
 
@@ -44,7 +49,7 @@ dq1 is the id. The letters, 'dq' are removed
 ```
 
 
-Do visit our website: [https://emexrevolarter.com](https://emexrevolarter.com) for more information on web & mobile solutions.
+Do visit our website: [https://creat.i.com](https://creat.i.com) for more information on web & mobile solutions.
 
 Thank you for visiting. If you found this repository helpful, please do star it.
 
